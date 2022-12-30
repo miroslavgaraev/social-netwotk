@@ -1,0 +1,51 @@
+.dialogs{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.dialogItems{
+    display: flex;
+    flex-direction: column;
+
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    /*background-color: darkgrey;*/
+    /*width: 10%;*/
+}
+.status{
+    font-size: 14px;
+    box-shadow: 0 0 7px #00c950;
+    border-radius: 10px;
+    text-align: center;
+}
+.name{
+    color: #00c950;
+    text-decoration: none;
+    font-size: 18px;
+}
+.follow{
+    background-color: #00c950;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+    margin-left: 6px;
+}
+.activePage{
+    background-color: #00c950;
+}
+.pageButton{
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 15px;
+}
+.switchPages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,54 @@
+.post{
+    padding-top: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+    border: solid #a9a9a9 1px;
+    border-radius: 5px;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.post img{
+    width: 100%;
+
+}
+.postText{
+    font-size: 2.5vw;
+    margin: 0px;
+    color: #595959;
+}
+.textCont{
+    width: 80%;
+    word-wrap: break-word;
+    padding-left: 5%;
+}
+.name{
+    color: black;
+    font-size: 4vw;
+    margin: 0;
+    padding-left: 5%;
+    margin-bottom: 5px;
+}
+.post input:focus{
+    outline: transparent;
+}
+.deleteButtonImg{
+    width: 20px;
+    height: 20px;
+}
+.edit-button-img{
+    width: 20px;
+    height: 20px;
+}
+.postsButton{
+    background-color: transparent;
+    border: none;
+    justify-content: flex-start;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.text{
+    display: flex;
+}
