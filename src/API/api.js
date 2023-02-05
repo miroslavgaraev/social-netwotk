@@ -1,6 +1,7 @@
 import * as axios from "axios";
 
 const basicURL = `https://social-network.samuraijs.com/api/1.0/`
+const basicFilmsURL = `http://www.omdbapi.com/?apikey=feec8e69&`
 const API_KEY = {'API-KEY': '91245eb1-e4c2-4713-8462-f5e778ca21c6'}
 
 export const getUserData = () => {
@@ -19,5 +20,13 @@ export const usersPage = (page, pageSize) => {
 }
 export const currentPageSize = (currentPage, pageSize) => {
     return axios.get(`${basicURL}users?page=${currentPage}&count=${pageSize}`, { withCredentials: true }
+        )
+}
+export const getFilms = (filmName) => {
+    return axios.get(`${basicFilmsURL}s=${filmName}`
+        )
+}
+export const getFilmData = (filmId) => {
+    return axios.get(`${basicFilmsURL}i=${filmId}&plot=full`
         )
 }

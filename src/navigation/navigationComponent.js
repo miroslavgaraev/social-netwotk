@@ -6,7 +6,7 @@ function Navigation() {
             <div className={'navigation'}>
                 <NavLink to={'/'}>Profile</NavLink>
                 <NavLink to={'/messages'}>Messages</NavLink>
-                <NavLink to={'/news'}>News</NavLink>
+                <NavLink to={'/films'}>Films</NavLink>
                 <NavLink to={'/music'}>Music</NavLink>
                 <NavLink to={'/settings'}>Settings</NavLink>
             </div>

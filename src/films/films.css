@@ -1,0 +1,16 @@
+.card{
+   width: 18rem;
+   margin: 15px
+}
+.films{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.large-card{
+   width: 25rem;
+   margin-right: 15px;
+}
+.film-desc-cont{
+   display: flex;
+}
