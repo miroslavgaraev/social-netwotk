@@ -1,7 +1,7 @@
 .header{
     display: flex;
     height: 70px;
-    background-color: #0003c9;
+    background-color: #00c950;
     width: 100%;
     flex-direction: row;
 }
@@ -9,4 +9,17 @@
     width: 65px;
     height: 65px;
     margin-left: 5px;
+}
+.login-cont{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.leave{
+    margin: 18px;
+    padding: 10px;
+    background-color: #0E3F18;
+    border: none;
+    border-radius: 20px;
+    color: white;
 }

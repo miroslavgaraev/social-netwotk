@@ -1,0 +1,74 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.formWrapper{
+    background: linear-gradient(180deg, #0E3F18 0%, #0F8E2B 100%);
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 10px 15px;
+    max-width: 300px;
+    max-height: 300px;
+}
+.registration{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.registration button{
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.isRegistration{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #FFFFFF;
+}
+.click{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.inputField, login{
+    padding: 10px 15px;
+    background: #FFFFFF;
+    border: 1px solid #18550E;
+    border-radius: 10px;
+    margin: 15px 0;
+    min-width: 250px;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enterButton{
+    margin: 15px 0;
+    background: #0E451A;
+    border: 1px solid #23D107;
+    border-radius: 10px;
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    min-width: 150px;
+    color: #FFFFFF;
+}
+.errorValidate{
+    color: red;
+    font-size: 20px;
+}

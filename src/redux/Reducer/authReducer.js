@@ -1,4 +1,4 @@
-import {SET_USER_DATA} from "../Constants/Constants";
+import {SET_USER_DATA, UNLOGIN_USER} from "../Constants/Constants";
 
 let initialState = {
     login: null, email: null, id:null, isAuth:false
@@ -10,6 +10,11 @@ let AuthReducers = (state = initialState, action) => {
                 ...state,
                 ...action.data,
                 isAuth:true
+            }
+        case UNLOGIN_USER:
+            return {
+            ...state,
+            isAuth:action.data
             }
         default:
             return state

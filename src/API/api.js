@@ -28,5 +28,16 @@ export const getFilms = (filmName) => {
 }
 export const getFilmData = (filmId) => {
     return axios.get(`${basicFilmsURL}i=${filmId}&plot=full`
-        )
+        )}
+export const login = (email, password, rememberMe) => {
+    return axios.post(`${basicURL}auth/login`, {email, password, rememberMe}, { withCredentials: true }).then(response => {
+        if(response.data.resultCode === 0){
+            return getUserData()
+        }
+    })}
+export const unlogin = () => {
+    return axios.delete(`${basicURL}auth/login`,{ withCredentials: true }).then(response => {
+        console.log(response)
+
+    })
 }

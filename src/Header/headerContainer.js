@@ -3,9 +3,9 @@ import logo from '../assets/ball.png'
 import "./header.css"
 import Header from "./headerComponent";
 import * as axios from "axios";
-import {set_user_data} from "../redux/Actions/AuthActions";
+import {set_user_data, unlogin_user} from "../redux/Actions/AuthActions";
 import {connect} from "react-redux";
-import {getUserData} from "../API/api";
+import {getUserData, unlogin} from "../API/api";
 class HeaderContainer extends React.Component{
     componentDidMount(){
 
@@ -17,9 +17,13 @@ class HeaderContainer extends React.Component{
             }
         })
     }
-
+    exit = () => {
+        unlogin().then(response => {
+            this.props.unloginUser(false)
+        })
+    }
     render(){
-        return <Header {...this.props}/>
+        return <Header {...this.props} exit = {this.exit}/>
 }
 }
 
@@ -32,7 +36,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        setUserData: (data) => {dispatch(set_user_data(data))}
+        setUserData: (data) => {dispatch(set_user_data(data))},
+        unloginUser: (data) => {dispatch(unlogin_user(data))}
     }
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);

@@ -19,7 +19,7 @@ function App() {
         <div className={'a'}>
             <Navigation className={'nav'}/>
             <Routes>
-                <Route path={'/profile'} element={<MainContainer className={'main'} />}></Route>
+                <Route path={'/'} element={<MainContainer className={'main'} />}></Route>
                 <Route path={'/profile/:id'} element={<MainContainer className={'main'} />}></Route>
                 <Route path={'/films/:id'} element={<FilmPage />}></Route>
                 <Route path={'/messages'} element={<Messages />}></Route>

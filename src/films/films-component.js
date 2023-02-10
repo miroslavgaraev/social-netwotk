@@ -3,7 +3,7 @@ import "./films.css";
 import {NavLink} from "react-router-dom";
 
 function FilmsComponent(props) {
-    const {searchFilms, setText, films} = props
+    const {searchFilms, setText, films, search} = props
 
     return (
         <div className='container'>
@@ -13,6 +13,14 @@ function FilmsComponent(props) {
                        aria-label="Recipient's username" aria-describedby="button-addon2"/>
                     <button onClick={searchFilms} className="btn btn-outline-secondary" type="button" id="button-addon2">Поиск</button>
             </div>
+            {search ?
+                <select onChange={(e) => console.log(e.target.value)} id={'select'} className="form-select" aria-label="Default select example">
+                    <option selected value=''>Все</option>
+                    <option value="movie" >Фильмы</option>
+                    <option value="series">Серии</option>
+                    <option value="episode">Эпизоды</option>
+                </select> :
+            <></>}
             <div className={'films'}>
                 {films.map((film, index) => {
                     console.log(film)
