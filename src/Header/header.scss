@@ -1,0 +1,37 @@
+$backgroundColor: #00c950;
+$textColor: white;
+.header{
+  display: flex;
+  padding: 15px;
+  background-color: $backgroundColor;
+  width: 100%;
+  flex-direction: row;
+  &__logo{
+    width: 65px;
+    height: 65px;
+  }
+  &__login-cont{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+
+  }
+  &__leave{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__btn{
+      height: 50px;
+      background-color: #0526ff;
+      border: none;
+      border-radius: 20px;
+      color: $textColor;
+      padding: 0 25px;
+    }
+  }
+  &__login{
+    margin-left: 20px;
+    color: $textColor;
+  }
+
+}

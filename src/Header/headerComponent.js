@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/ball.png";
-import "./header.css";
 import {NavLink, useNavigate} from "react-router-dom";
 import {unlogin} from "../API/api";
 
@@ -9,23 +8,17 @@ function Header(props) {
 
 
   return (
-    <div className={"headerCont"}>
-      <div className={"white"}></div>
-      <div className={"header"}>
-        <img className={"logo"} src={logo} />
+    <div className={"header"}>
+        <img className={"header__logo"} src={logo} />
           {!isAuth ?
-              <div>
-              <NavLink to={'/login'}>Login</NavLink>
-              </div>
+              <div></div>
               :
-              <div className={'login-cont'}>
-                  <p className={'login'}>{login}</p>
-                  <button className={'leave'} onClick={exit}>Выйти</button>
+              <div className={'header__login-cont'}>
+                  <div className={'header__login'}><h1>{login}</h1></div>
+
+                  <div className={'header__leave'}><button className={'header__leave__btn'} onClick={exit}>Выйти</button></div>
               </div>
           }
-
-      </div>
-      <div className={"white"}></div>
     </div>
   );
 }

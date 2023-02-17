@@ -4,7 +4,7 @@ import Navigation from "./navigation/navigationComponent";
 import Main from "./Main/mainComponent";
 import {Route, Routes} from "react-router-dom";
 import Messages from "./Messages/messagesComponent";
-import state from './redux/state'
+
 import MainContainer from "./Main/mainContainer";
 import HeaderContainer from "./Header/headerContainer";
 import LoginPage from "./login/login";

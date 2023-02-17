@@ -22,8 +22,8 @@ export const currentPageSize = (currentPage, pageSize) => {
     return axios.get(`${basicURL}users?page=${currentPage}&count=${pageSize}`, { withCredentials: true }
         )
 }
-export const getFilms = (filmName) => {
-    return axios.get(`${basicFilmsURL}s=${filmName}`
+export const getFilms = (filmName, type, page) => {
+    return axios.get(`${basicFilmsURL}s=${filmName}&type=${type}&page=${page}`
         )
 }
 export const getFilmData = (filmId) => {
