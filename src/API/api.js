@@ -41,3 +41,13 @@ export const unlogin = () => {
 
     })
 }
+
+export const getUser = (id) => {
+    return axios.get(`${basicURL}profile/${id}`, {withCredentials: true})
+}
+
+export const downloadPhoto = (file) => {
+    let formData = new FormData();
+    formData.append("image", file)
+    return axios.put(`${basicURL}profile/photo`, formData, {headers: {"Content-Type": 'multipart/form-data'}, withCredentials: true})
+}

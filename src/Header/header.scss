@@ -1,5 +1,4 @@
-$backgroundColor: #00c950;
-$textColor: white;
+@import '../assets/scss/colors.scss';
 .header{
   display: flex;
   padding: 15px;
@@ -14,7 +13,23 @@ $textColor: white;
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
+    align-items: center;
 
+  }
+  &__openNavigation{
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+  }
+  &__openNavigationImg{
+    width: 50px;
+    height: 50px;
+  }
+  &__openNavigationButton{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    right: 6vw;
   }
   &__leave{
     display: flex;
@@ -34,4 +49,42 @@ $textColor: white;
     color: $textColor;
   }
 
+}
+@media (min-width: 1000px) {
+  .header__openNavigation{
+    display: none;
+  }
+  .navigation-mobile{
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .header h1{
+    font-size: 5vw;
+    margin: 0;
+  }
+  .navigation-mobile{
+    background-color: $backgroundColor;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 10px 0;
+    animation: navigation-open 1s;
+    & a{
+      margin-top: 5px;
+      text-decoration: none;
+      color: $textColor;
+      font-size: 20px;
+    }
+  }
+  .header__login{
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+@keyframes navigation-open {
+  0% {scale: 0; opacity: 0}
 }

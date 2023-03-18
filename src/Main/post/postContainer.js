@@ -12,7 +12,6 @@ function PostContainer(props){
     const [activatedInput, setActivatedInput] = useState(false)
     const [postText, setPostText] = useState('')
 
-
     const deletePost = (index) => {
         dispatch(delete_post(index))
     }

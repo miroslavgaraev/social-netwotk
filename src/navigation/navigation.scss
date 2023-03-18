@@ -1,0 +1,27 @@
+@import '../assets/scss/colors.scss';
+.navigation{
+  background-color: $backgroundColor;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-right: 10px;
+}
+.navigation a{
+  margin-top: 5px;
+  text-decoration: none;
+  color: $textColor;
+  margin-left: 5px;
+  font-size: 1.8vw;
+}
+.navigation a:hover{
+  color: $hoverTextColor;
+}
+.navigation a.active{
+  color: $hoverTextColor;
+}
+@media (max-width: 1000px) {
+  .navigation{
+    display: none
+  }
+}

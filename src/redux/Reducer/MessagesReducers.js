@@ -1,6 +1,6 @@
 import {
   FOLLOW,
-  SET_CURRENT_PAGE,
+  SET_CURRENT_PAGE, SET_USER_ID,
   SET_USERS,
   TOGGLE_IS_LOADING,
   TOTAL_USERS_COUNT,
@@ -17,6 +17,7 @@ let initialState = {
   totalUsersCount: 0,
   currentPage: 1,
   isLoading: true,
+  userId: null
 };
 let MessagesReducers = (state = initialState, action) => {
   let usersCopy = state.users;
@@ -69,6 +70,11 @@ let MessagesReducers = (state = initialState, action) => {
         ...state,
         isLoading: action.isLoading,
       };
+    case SET_USER_ID:
+      return {
+        ...state,
+        userId: action.userId
+      }
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import {
     FOLLOW,
-    SET_CURRENT_PAGE,
+    SET_CURRENT_PAGE, SET_USER_ID,
     SET_USERS,
     TOGGLE_IS_LOADING,
     TOTAL_USERS_COUNT,
@@ -43,5 +43,12 @@ export const setIsLoading = (isLoading) =>{
     return{
         type:TOGGLE_IS_LOADING,
         isLoading
+    }
+}
+
+export const set_UserId = (id) => {
+    return{
+        type: SET_USER_ID,
+        userId:id
     }
 }

@@ -1,7 +1,12 @@
 @import '../../Header/header.scss';
+@import '../../navigation/navigation.scss';
 
 .App{
   display: flex;
   margin: 10px;
   flex-direction: column;
+  min-height: 100vh;
+}
+.a{
+  height: 100%;
 }

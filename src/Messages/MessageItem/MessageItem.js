@@ -2,7 +2,7 @@ import { deleteFollowUser, postFollowUser } from "../../API/api";
 import { NavLink } from "react-router-dom";
 import userPhoto from "../../assets/149452.png";
 import {useDispatch} from "react-redux";
-import {follow_user, unfollow_user} from "../../redux/Actions/MessagesAction";
+import {follow_user, set_UserId, unfollow_user} from "../../redux/Actions/MessagesAction";
 
 const MessageItem = (props) => {
   const { ...user } = props;
@@ -22,10 +22,13 @@ const MessageItem = (props) => {
       });
     }
   };
+  const setUserId = (userId) => {
+    dispatch(set_UserId(userId))
+  }
   return (
     <div className={"item"}>
       <div>
-        <NavLink to={`/profile/${user.id}`}>
+        <NavLink onClick={() => {setUserId(user.id)}} to={`/profile/${user.id}`}>
           <img
             src={user.photos.small != null ? user.photos.small : userPhoto}
             width={"100"}

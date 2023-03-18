@@ -2,9 +2,11 @@
     display: flex;
     margin: 10px;
     flex-direction: column;
+    min-height: 100vh;
 }
 .a{
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    min-height: 100vh;
 }
