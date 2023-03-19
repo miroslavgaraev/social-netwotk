@@ -6,7 +6,7 @@ import profileBigPhoto from '../assets/priroda.jpg'
 import PostContainer from "./post/postContainer";
 
 const Main = (props) =>{
-    const {posts, newPostElement, addNewPost, onPhotoSelect, userId, id} = props
+    const {posts, newPostElement, addNewPost, onPhotoSelect, userId, id, onDoubleClick, showInput, editStatus, onChange, userStatus} = props
     return (
         <div className={'main'}>
             <div className={'profile'}>
@@ -24,7 +24,10 @@ const Main = (props) =>{
                 </div>
                 <div className={'profileStatus'}>
                     <span>{props?.user?.fullName? props.user.fullName: 'Hello'}</span>
-                    <span>{props?.user?.aboutMe? props.user.aboutMe: 'Hello'}</span>
+                    {showInput ?
+                        <input onChange={(e) => {onChange(e.target.value)}} onKeyPress={(e) => {editStatus(e)}} placeholder={"Введите статус"} autoFocus type={'text'}/>
+                        :
+                        <span onClick={onDoubleClick}>{userStatus? userStatus: 'Установите статус'}</span>}
                 </div>
 
             </div>

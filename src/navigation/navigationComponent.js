@@ -4,10 +4,10 @@ import {set_UserId} from "../redux/Actions/MessagesAction";
 import {useDispatch, useSelector} from "react-redux";
 function Navigation() {
     const dispatch = useDispatch()
+    const {id} = useSelector((state) => state.AuthReducer)
     const setUserId = (userId) => {
         dispatch(set_UserId(userId))
     }
-    const {id} = useSelector((state) => state.AuthReducer)
     return (
             <div className={'navigation'}>
                 <NavLink onClick={() => {setUserId(id)}} to={'/'}>Profile</NavLink>

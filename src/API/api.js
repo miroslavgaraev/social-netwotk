@@ -51,3 +51,9 @@ export const downloadPhoto = (file) => {
     formData.append("image", file)
     return axios.put(`${basicURL}profile/photo`, formData, {headers: {"Content-Type": 'multipart/form-data'}, withCredentials: true})
 }
+export const setStatus = (status) => {
+    return axios.put(`${basicURL}profile/status`, {status:status}, {withCredentials: true})
+}
+export const getStatus = (userId) => {
+    return axios.get(`${basicURL}profile/status/${userId}`, {withCredentials: true})
+}
