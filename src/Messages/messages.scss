@@ -1,0 +1,56 @@
+$mainColor: #00c950;
+$followColor: white;
+
+.dialogs{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.dialogItems{
+  display: flex;
+  flex-direction: column;
+
+}
+.item{
+  display: flex;
+  flex-direction: column;
+
+}
+.status{
+  font-size: 14px;
+  box-shadow: 0 0 7px $mainColor;
+  border-radius: 10px;
+  text-align: center;
+}
+.name{
+  color: $mainColor;
+  text-decoration: none;
+  font-size: 18px;
+}
+.follow{
+  background-color: $mainColor;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  color: $followColor;
+  margin-left: 6px;
+}
+.activePage{
+  background-color: $mainColor;
+}
+.pageButton{
+  border: none;
+  margin: 5px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.switchPages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  width: 18rem;
+}
