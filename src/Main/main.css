@@ -1,56 +1,109 @@
-.main{
-    background-color: #00c950;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
+.main {
+  background-color: #00c950;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
 }
-.newPostTextArea{
-    resize: none;
-    outline: none;
-    border: black;
-    width: 80vw;
-    min-height: 50px;
-    background-color: #00c950;
+
+.newPostTextArea {
+  resize: none;
+  outline: none;
+  border: black;
+  width: 80vw;
+  min-height: 50px;
+  background-color: #00c950;
 }
-.newPostTextArea:focus{
-    outline: none;
+
+.newPostTextArea:focus {
+  outline: none;
 }
-.addPost{
-    width: 100%;
-    border: none;
-    background-color: transparent;
+
+.addPost {
+  width: 100%;
+  border: none;
+  background-color: transparent;
 }
-.addPost:hover{
-    background-color: rgba(253, 255, 254, 0.2);
+
+.addPost:hover {
+  background-color: rgba(253, 255, 254, 0.2);
 }
-.avatar{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
-.profileBigPhoto{
-    height: 20vw;
-    width: 100%;
-    object-fit: cover;
+
+.profileBigPhoto {
+  height: 20vw;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.profile{
-    width: 100%;
+
+.profile {
+  width: 100%;
 }
-.profileStatus{
-    display: flex;
-    flex-direction: column;
+
+.profileStatus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.changePhotoLabel{
-    margin-top: 15px;
-    font-size: 16px;
+
+.changePhotoLabel {
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: #0E3F18;
+  color: white;
+  padding: 5px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 5px 3px rgba(19, 211, 3, 0.5);
+          box-shadow: 0 1px 5px 3px rgba(19, 211, 3, 0.5);
 }
-.changePhotoInput{
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-    overflow: hidden;
-    width: 0;
-    height: 0;
+
+.changePhotoInput {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.profile-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  padding: 10px 15px;
+}
+
+.profilePhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

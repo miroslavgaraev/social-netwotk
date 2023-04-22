@@ -26,8 +26,8 @@ function MainContainer(props) {
   }
   const editStatus = async (e) => {
     if(e.key === 'Enter'){
-      setShowInput(false)
       await setStatus(statusText)
+      setShowInput(false)
     }
   }
   const onDoubleClick = (e) => {
@@ -45,20 +45,20 @@ function MainContainer(props) {
 
     newPostElement.current.value = "";
   };
-  const onPhotoSelect = (e) => {
+  const onPhotoSelect = async (e) => {
     if (e.target.files.length){
-      downloadPhoto(e.target.files[0])
+      await downloadPhoto(e.target.files[0])
     }
   };
-  useEffect(() => {
-    getUser(userId
-    ).then((response) => {
-      dispatch(setUserProfile(response.data));
-    });
-    getStatus(userId).then((response) => {
-      setUserStatus(response.data)
-    })
-  }, []);
+  // useEffect(() => {
+  //   getUser(userId
+  //   ).then((response) => {
+  //     dispatch(setUserProfile(response.data));
+  //   });
+  //   getStatus(userId).then((response) => {
+  //     setUserStatus(response.data)
+  //   })
+  // }, []);
   useEffect(() => {
     getUser(userId
     ).then((response) => {
@@ -69,7 +69,7 @@ function MainContainer(props) {
     getStatus(userId).then((response) => {
       setUserStatus(response.data)
     })
-  }, [showInput])
+  }, [showInput, userId])
   if (isAuth === false) return navigate("/login");
   return (
     <Main

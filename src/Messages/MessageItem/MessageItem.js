@@ -1,25 +1,17 @@
-import { deleteFollowUser, postFollowUser } from "../../API/api";
 import { NavLink } from "react-router-dom";
 import userPhoto from "../../assets/149452.png";
 import {useDispatch} from "react-redux";
-import {follow_user, set_UserId, unfollow_user} from "../../redux/Actions/MessagesAction";
+import {set_UserId} from "../../redux/Actions/MessagesAction";
+import {follow, unfollow} from "../../redux/Reducer/MessagesReducers";
 
 const MessageItem = (props) => {
   const { ...user } = props;
   const dispatch = useDispatch()
   const changeFollowingProgress = (user) => {
     if (!user.followed) {
-      postFollowUser(user.id).then((response) => {
-        if (response.data.resultCode === 0) {
-         dispatch(follow_user(user.id))
-        }
-      });
+      dispatch(follow(user.id))
     } else {
-      deleteFollowUser(user.id).then((response) => {
-        if (response.data.resultCode === 0) {
-          dispatch(unfollow_user(user.id))
-        }
-      });
+      dispatch(unfollow(user.id))
     }
   };
   const setUserId = (userId) => {
